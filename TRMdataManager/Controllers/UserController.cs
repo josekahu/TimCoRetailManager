@@ -11,15 +11,16 @@ namespace TRMdataManager.Controllers
 {
 
     [Authorize]
-    [RoutePrefix("api/User")]
+    //[RoutePrefix("api/User")]
     public class UserController : ApiController
     {
-        public List<UserModel> GetById()
+        [HttpGet]
+        public UserModel GetById()
         {
             string userId = RequestContext.Principal.Identity.GetUserId();
             UserData data = new UserData();
 
-            return data.GetUserById(userId);
+            return data.GetUserById(userId).First();
         }
     }
 }
