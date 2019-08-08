@@ -5,5 +5,5 @@
     [ProductId] INT NOT NULL,
 	[Quantity] INT NOT NULL DEFAULT 1,
     [PurchasePrice] MONEY NOT NULL, 
-    [Tax] MONEY NOT NULL DEFAULT 0
+    [Tax] MONEY NOT NULL DEFAULT 0 
 )
