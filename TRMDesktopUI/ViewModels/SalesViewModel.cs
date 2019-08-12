@@ -161,7 +161,7 @@ namespace TRMDesktopUI.ViewModels
         public void AddToCart()
         {
             CartItemModel existingItem = Cart.FirstOrDefault(x => x.Product == SelectedProduct);
-
+            
             if (existingItem != null)
             {
                 existingItem.QuantityInCart += ItemQuantity;
@@ -185,7 +185,7 @@ namespace TRMDesktopUI.ViewModels
             NotifyOfPropertyChange(() => Tax);
             NotifyOfPropertyChange(() => Total);
         }
-
+        
         public bool CanRemoveFromCart
         {
             get
